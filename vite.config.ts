@@ -4,13 +4,12 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
-    
-    // Safely grab the variables from either Node's process.env OR Vite's loaded .env
     const apiKey = process.env.GEMINI_API_KEY || env.GEMINI_API_KEY || '';
-    const base = process.env.VITE_BASE_URL || env.VITE_BASE_URL || '/';
     
     return {
-      base,
+      // THE MAGIC FIX: This forces relative paths so GitHub Pages doesn't lose the JS file
+      base: './', 
+      
       server: {
         port: 3000,
         host: '0.0.0.0',
