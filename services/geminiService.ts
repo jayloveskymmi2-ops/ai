@@ -79,7 +79,7 @@ export const generateLyrics = async (params: GenerateParams): Promise<string> =>
   try {
     const response = await ai.models.generateContent({
         // Switched to slash to avoid Pro tier restrictions while maintaining quality
-        model: 'gemini-3.0-pro',
+        model: 'gemini-3.0-flash',
         contents: prompt,
         config: {
           temperature: 0.9,
