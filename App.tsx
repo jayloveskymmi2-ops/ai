@@ -130,7 +130,7 @@ const App: React.FC = () => {
         </main>
 
         <footer className="text-center mt-12 text-gray-700 text-[10px] uppercase tracking-[0.4em] font-black">
-          <p>The Architect Lyrical Engine V2.1 • Powered by Gemini 3 Flash</p>
+          <p>The Undead AI Lyrical Engine V3 • Powered by Undead Souls</p>
         </footer>
       </div>
     </div>
