@@ -27,7 +27,7 @@ const structures = [
   { label: 'Chorus', prefix: 'Draft an anthemic [Chorus] for: ', icon: '🎡' },
   { label: 'Verse 2', prefix: 'Regenerate [Verse 2] with deep story for: ', icon: '📜' },
   { label: 'Bridge', prefix: 'Write a mood-shifting [Bridge] for: ', icon: '🌉' },
-  { label: 'Verse 3', prefix: 'Architect a high-intensity [Verse 3] for: ', icon: '🧨' },
+  { label: 'Verse 3', prefix: 'Craft a high-intensity [Verse 3] for: ', icon: '🧨' },
   { label: 'Outro', prefix: 'Draft a fading [Outro] for: ', icon: '🏁' },
 ];
 
@@ -71,7 +71,7 @@ const LyricsForm: React.FC<LyricsFormProps> = ({
   const [shake, setShake] = useState(false);
 
   const applyStructure = (prefix: string) => {
-    const cleanIdea = idea.replace(/^(Rewrite|Regenerate|Draft|Architect|Write).+?for: /i, '').trim();
+    const cleanIdea = idea.replace(/^(Rewrite|Regenerate|Draft|Craft|Write).+?for: /i, '').trim();
     setIdea(`${prefix}${cleanIdea}`);
   };
 
